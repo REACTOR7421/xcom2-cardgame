@@ -1,0 +1,12 @@
+{
+  "name": "xcom2-cardgame",
+  "version": "1.0.0",
+  "description": "XCOM 2 kártyajáték webes verziója",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
