@@ -1,23 +1,19 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XCOM 2 Kártyajáték</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="#">Főoldal</a></li>
-            <li><a href="#">Összes kártya</a></li>
-            <li><a href="#">Tutorial</a></li>
-            <li><a href="#">Játék</a></li>
-        </ul>
-    </nav>
-    <header>
-        <h1>XCOM 2 Kártyajáték</h1>
-        <p>Üdvözöllek a kártyajáték hivatalos oldalán! Hamarosan több információ érkezik.</p>
-    </header>
-</body>
-</html>
+const express = require('express');
+const path = require('path');
+
+const app = express();
+const PORT = process.env.PORT || 3000; // A Render automatikusan beállítja a PORT változót
+
+// Statikus fájlok kiszolgálása a "public" mappából
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Alapértelmezett útvonal az index.html betöltésére
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Szerver indítása
+app.listen(PORT, () => {
+    console.log(`✅ Szerver fut: http://localhost:${PORT}`);
+});
+
