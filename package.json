@@ -16,3 +16,8 @@
     "build": "echo 'No build step needed'"
   }
 }
+{
+  "engines": {
+    "node": "18.x"
+  }
+}
