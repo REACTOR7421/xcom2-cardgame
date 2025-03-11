@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 3000; // A Render automatikusan beállítja a PORT változót
+const PORT = process.env.PORT || 10000; // A Render automatikusan beállítja a PORT változót
 
 // Statikus fájlok kiszolgálása a "public" mappából
 app.use(express.static(path.join(__dirname, 'public')));
