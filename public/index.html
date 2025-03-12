@@ -3,60 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XCOM2 Kártyajáték</title>
+    <title>XCOM Kártyajáték</title>
     <style>
         body {
-            background-color: #D2B48C; /* Világos barna háttér */
+            background-color: #d2b48c; /* Világos barna háttér */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
         }
-        .menu-container {
+        .nav-bar {
+            background-color: #8b5a2b; /* Sötétebb barna vonal */
+            padding: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 20px;
-            position: relative;
-        }
-        .menu-bar {
-            width: 80%;
-            height: 4px;
-            background-color: black;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 0;
-        }
-        .menu {
-            display: flex;
             gap: 20px;
-            background-color: #8B5A2B; /* Sötétebb barna keret */
-            padding: 10px 20px;
-            border-radius: 10px;
-            z-index: 1;
         }
-        .menu a {
-            text-decoration: none;
+        .nav-bar a {
             color: white;
-            font-weight: bold;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 16px;
         }
-        h1 {
-            margin-top: 50px;
+        .nav-bar a:hover {
+            background-color: #a67b5b;
+            border-radius: 5px;
+        }
+        .language-selector {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .language-selector img {
+            width: 30px;
+            height: auto;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
         }
     </style>
 </head>
 <body>
-    <h1>XCOM2 Kártyajáték</h1>
-    <div class="menu-container">
-        <div class="menu-bar"></div>
-        <div class="menu">
-            <a href="#">Főoldal</a>
-            <a href="#">Összes Kártya</a>
-            <a href="#">Játék</a>
-            <a href="#">Tutorial</a>
-        </div>
+    <div class="language-selector">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg" alt="Magyar" onclick="changeLanguage('hu')">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="English" onclick="changeLanguage('en')">
     </div>
+    
+    <div class="nav-bar">
+        <a href="#">Főoldal</a>
+        <a href="#">Összes kártya</a>
+        <a href="#">Játék</a>
+        <a href="#">Tutorial</a>
+    </div>
+    
+    <div class="content">
+        <h1>💥 Izgalom, stratégia, gyors matek és kemény döntések egy játékban!</h1>
+        <p>Ez a kártyajáték az XCOM széria ihletésére készült, és 2 vagy több játékos számára kínál izgalmas taktikai csatákat. Ha szereted a kihívásokat és a stratégiai gondolkodást, ez a játék neked szól!</p>
+        <h2>Hogyan született meg?</h2>
+        <p>Helló, üdvözöllek a játékomban!<br>
+        A fejlesztés 2023-ban indult – akkor még csak egyszerű kártyapapírokkal játszottam, de innen indult minden. 2025-re viszont egy nagyobb ötletem támadt: mi lenne, ha egy weboldalon az egész világ kipróbálhatná és tesztelhetné?</p>
+        <p>Ez egy egyedi és kihívást jelentő játék, ahol a matematikai gondolkodás elengedhetetlen. Ha ismered és szereted az XCOM szériát, ez a játék ismerős lehet – de ne aggódj, a mechanikákat átalakítottam, így friss és élvezetes élményt nyújt!</p>
+        <p>Remélem, kipróbálod és tetszeni fog!</p>
+    </div>
+    
+    <script>
+        function changeLanguage(lang) {
+            alert('Nyelvválasztás még nincs implementálva: ' + lang);
+        }
+    </script>
 </body>
 </html>
+
 
