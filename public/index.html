@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XCOM 2 Kártyajáték</title>
-    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Nunito&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #d2b48c;
@@ -14,70 +14,84 @@
             margin: 0;
             padding: 0;
         }
-        .header {
-            background-color: #654321;
-            padding: 20px 0;
-        }
-        .header h1 {
+        h1 {
             font-family: 'Acme', sans-serif;
-            font-size: 2.5em;
-            margin: 0;
-            color: white;
+            font-size: 3rem;
+            margin-top: 20px;
         }
-        .nav {
+        .nav-bar {
+            background-color: #5a3e2b;
+            padding: 15px 0;
             display: flex;
             justify-content: center;
-            background-color: #8b5a2b;
-            padding: 10px 0;
+            gap: 20px;
         }
-        .nav a {
-            font-size: 1.5em;
-            margin: 0 15px;
+        .nav-bar a {
             color: black;
+            font-size: 1.5rem;
             text-decoration: none;
             padding: 10px 20px;
-            background-color: #c19a6b;
-            border-radius: 5px;
+            background-color: #a67c52;
+            border-radius: 10px;
         }
-        .nav a:hover {
-            background-color: #a67b5b;
+        .nav-bar a:hover {
+            background-color: #8b5a2b;
         }
         .content {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 40px auto;
             padding: 20px;
+            background-color: #d2b48c;
+            border-radius: 10px;
         }
-        .language-selector {
-            margin-top: 20px;
+        .flag-selector {
+            position: absolute;
+            top: 10px;
+            right: 10px;
         }
-        .language-selector img {
-            width: 50px;
-            height: auto;
-            margin: 0 10px;
+        .flag-selector img {
+            width: 40px;
+            height: 30px;
+            margin-left: 10px;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>XCOM 2 Kártyajáték</h1>
+    <div class="flag-selector">
+        <img src="hungary-flag.png" alt="Magyar" onclick="setLanguage('hu')">
+        <img src="uk-flag.png" alt="English" onclick="setLanguage('en')">
     </div>
-    <div class="nav">
+    
+    <h1>XCOM 2 Kártyajáték</h1>
+    
+    <div class="nav-bar">
+        <a href="#">Főoldal</a>
         <a href="#">Összes kártya</a>
         <a href="#">Játék</a>
         <a href="#">Tutorial</a>
-        <a href="#">Főoldal</a>
     </div>
+    
     <div class="content">
-        <p style="font-size: 1.2em;">💥 Izgalom, stratégia, gyors matek és kemény döntések egy játékban!</p>
-        <p>Ez a kártyajáték az XCOM széria ihletésére készült, és 2 vagy több játékos számára kínál izgalmas taktikai csatákat...</p>
-    </div>
-    <div class="language-selector">
-        <img src="hungary-flag.png" alt="Magyar" title="Magyar">
-        <img src="uk-flag.png" alt="English" title="English">
+        <p style="font-size: 1.2rem;">
+            💥 Izgalom, stratégia, gyors matek és kemény döntések egy játékban!<br><br>
+            Ez a kártyajáték az XCOM széria ihletésére készült, és 2 vagy több játékos számára kínál izgalmas taktikai csatákat. 
+            Ha szereted a kihívásokat és a stratégiai gondolkodást, ez a játék neked szól!
+        </p>
+        <p style="font-size: 1.2rem;">
+            <strong>Hogyan született meg?</strong><br><br>
+            Helló, üdvözöllek a játékomban!<br>
+            A fejlesztés 2023-ban indult – akkor még csak egyszerű kártyapapírokkal játszottam, de innen indult minden. 
+            2025-re viszont egy nagyobb ötletem támadt: mi lenne, ha egy weboldalon az egész világ kipróbálhatná és tesztelhetné?
+        </p>
+        <p style="font-size: 1.2rem;">
+            Ez egy egyedi és kihívást jelentő játék, ahol a matematikai gondolkodás elengedhetetlen. Ha ismered és szereted az XCOM szériát, ez a játék ismerős lehet – de ne aggódj, a mechanikákat átalakítottam, így friss és élvezetes élményt nyújt!
+        </p>
+        <p style="font-size: 1.2rem;">
+            Remélem, kipróbálod és tetszeni fog!
+        </p>
     </div>
 </body>
 </html>
-
 
 
