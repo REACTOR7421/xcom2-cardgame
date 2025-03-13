@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Összes kártya</title>
+    <title>Összes Kártya</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .card-container {
@@ -36,26 +36,20 @@
 </head>
 <body>
 
+    <!-- Fejléc és Navigáció -->
     <h1>Összes Kártya</h1>
+    <nav class="nav-bar">
+        <a href="index.html">Főoldal</a>
+        <a href="cards.html">Összes Kártya</a>
+        <a href="#">Játék</a>
+        <a href="#">Tutorial</a>
+    </nav>
+
+    <!-- Kártyák konténere -->
     <div class="card-container" id="card-container"></div>
 
-    <script>
-        // Kártyák automatikus generálása
-        const container = document.getElementById("card-container");
-
-        // Ha a fájlnevek sorszámozottak pl. "card1.png", "card2.png" ... "card128.png"
-        for (let i = 1; i <= 128; i++) {
-            const card = document.createElement("div");
-            card.classList.add("card");
-
-            const img = document.createElement("img");
-            img.src = `cards/card${i}.png`; // Kép útvonala
-            img.alt = `Kártya ${i}`;
-
-            card.appendChild(img);
-            container.appendChild(card);
-        }
-    </script>
+    <!-- JavaScript betöltés -->
+    <script src="scripts/loadCards.js"></script>
 
 </body>
 </html>
