@@ -66,3 +66,28 @@ h1 {
         grid-template-columns: repeat(2, 1fr); /* Mobilon 2 oszlopos */
     }
 }
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #5a3e2b;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 15px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+body {
+    padding-top: 60px; /* Hogy ne takarja ki a tartalmat */
+}
