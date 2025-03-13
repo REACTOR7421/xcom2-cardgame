@@ -1,4 +1,4 @@
-/* Alapbeállítások */
+/* Alap beállítások */
 body {
     background-color: #d2b48c;
     color: black;
@@ -8,11 +8,11 @@ body {
     padding: 0;
 }
 
-/* Címek */
+/* Cím (H1) – Acme betűtípussal */
 h1 {
     font-family: 'Acme', sans-serif;
     font-size: 3rem;
-    margin-top: 100px; /* Megemelve, hogy ne takarja a navbar */
+    margin-top: 120px; /* Megemelve, hogy ne takarja a navbar */
 }
 
 /* Navigációs sáv */
@@ -45,28 +45,36 @@ h1 {
 /* Tartalom blokk */
 .content {
     max-width: 800px;
-    margin: 120px auto 40px; /* Hely a navbar miatt */
+    margin: 140px auto 40px; /* Több hely a navbar miatt */
     padding: 20px;
     background-color: #e3c49a;
     border-radius: 10px;
 }
 
-/* Kártyák fejléc sávja */
-.card-header {
-    background-color: #5a3e2b;
-    color: white;
-    padding: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    text-align: center;
+/* Nyelvválasztó */
+.flag-selector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
-/* Mobilbarát dizájn */
-@media (max-width: 768px) {
-    .content {
-        margin-top: 140px; /* Extra hely a kisebb képernyőkre */
-    }
+.flag-selector img {
+    width: 40px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* Kártya Galéria */
+.card-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.card-gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
 }
 
