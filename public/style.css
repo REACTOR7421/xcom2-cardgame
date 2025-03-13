@@ -3,10 +3,66 @@ body {
     color: black; /* Fekete szöveg */
     font-family: Arial, sans-serif;
     text-align: center;
-    padding-top: 20%;
     margin: 0;
+    padding: 0;
 }
 
+/* Címek stílusa */
 h1 {
-    font-size: 2em;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Navigációs sáv */
+.nav-bar {
+    background-color: #5a3e2b;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-bar a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #a67c52;
+    border-radius: 10px;
+}
+
+.nav-bar a:hover {
+    background-color: #8b5a2b;
+}
+
+/* Kártyák táblázatos elrendezése */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 oszlopos elrendezés */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background-color: white;
+    border: 2px solid #5a3e2b;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Mobilbarát dizájn */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* Mobilon 2 oszlopos */
+    }
 }
