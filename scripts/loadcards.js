@@ -1,4 +1,3 @@
-
 // Kártyák betöltése és megjelenítése az oldalra
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("card-container");
@@ -8,21 +7,34 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // Kártyanevek és ritkaságok importálása a cards.js-ből
-    if (typeof cards === "undefined") {
-        console.error("A cards.js nincs betöltve vagy hibás.");
+    // Ellenőrizzük, hogy a cards.js be van-e töltve
+    if (!window.cards || !Array.isArray(window.cards)) {
+        console.error("A cards.js nincs megfelelően betöltve.");
         return;
     }
 
+    // Ritkaságok listája
+    const rarities = ["gyakori", "ritka", "epikus", "legendas"];
+
     // Kártyák generálása
-    cards.forEach(card => {
-        ["gyakori", "ritka", "epikus", "legendas"].forEach(rarity => {
+    window.cards.forEach(card => {
+        rarities.forEach(rarity => {
+            const cardDiv = document.createElement("div");
+            cardDiv.classList.add("card");
+
             const img = document.createElement("img");
             img.src = `public/cards/${card}_${rarity}.png`;
             img.alt = `${card} (${rarity})`;
             img.classList.add("card-image");
 
-            container.appendChild(img);
+            // Ha a kép nem létezik, hibakezelés (elkerüli a törött kép ikonokat)
+            img.onerror = function () {
+                console.warn(`Hiányzó kép: ${img.src}`);
+                cardDiv.style.display = "none"; // Elrejti az üres kártyát
+            };
+
+            cardDiv.appendChild(img);
+            container.appendChild(cardDiv);
         });
     });
 });
