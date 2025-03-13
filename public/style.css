@@ -1,16 +1,17 @@
+/* Alapbeállítások */
 body {
-    background-color: #d2b48c; /* Világos barna háttér */
-    color: black; /* Fekete szöveg */
-    font-family: Arial, sans-serif;
+    background-color: #d2b48c;
+    color: black;
+    font-family: 'Nunito', sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* Címek stílusa */
+/* Címek */
 h1 {
+    font-family: 'Acme', sans-serif;
     font-size: 3rem;
-    font-weight: bold;
     margin-top: 20px;
 }
 
@@ -36,10 +37,54 @@ h1 {
     background-color: #8b5a2b;
 }
 
+/* Tartalom blokk */
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #e3c49a;
+    border-radius: 10px;
+}
+
+/* Zászlók nyelvváltáshoz */
+.flag-selector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.flag-selector img {
+    width: 40px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Kártyák megjelenítése */
+.card-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card-gallery img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.card-gallery img:hover {
+    transform: scale(1.1);
+}
+
 /* Kártyák táblázatos elrendezése */
 .card-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 oszlopos elrendezés */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
@@ -63,31 +108,6 @@ h1 {
 /* Mobilbarát dizájn */
 @media (max-width: 768px) {
     .card-container {
-        grid-template-columns: repeat(2, 1fr); /* Mobilon 2 oszlopos */
+        grid-template-columns: repeat(2, 1fr);
     }
-}
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #5a3e2b;
-    padding: 15px;
-    text-align: center;
-    z-index: 1000;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin: 0 15px;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-}
-
-body {
-    padding-top: 60px; /* Hogy ne takarja ki a tartalmat */
 }
