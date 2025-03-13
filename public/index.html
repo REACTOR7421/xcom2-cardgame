@@ -5,99 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XCOM 2 Kártyajáték</title>
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Nunito&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #d2b48c;
-            color: black;
-            font-family: 'Nunito', sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            font-family: 'Acme', sans-serif;
-            font-size: 3rem;
-            margin-top: 20px;
-        }
-        .nav-bar {
-            background-color: #5a3e2b;
-            padding: 15px 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .nav-bar a {
-            color: black;
-            font-size: 1.5rem;
-            text-decoration: none;
-            padding: 10px 20px;
-            background-color: #a67c52;
-            border-radius: 10px;
-        }
-        .nav-bar a:hover {
-            background-color: #8b5a2b;
-        }
-        .content {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #d2b48c;
-            border-radius: 10px;
-        }
-        .flag-selector {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-        .flag-selector img {
-            width: 40px;
-            height: 30px;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-        /* Kártyák megjelenítése */
-        .card-gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .card-gallery img {
-            width: 150px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.2s;
-        }
-        .card-gallery img:hover {
-            transform: scale(1.1);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="flag-selector">
         <img src="hungary-flag.png" alt="Magyar" onclick="setLanguage('hu')">
         <img src="uk-flag.png" alt="English" onclick="setLanguage('en')">
     </div>
-    
+
     <h1>XCOM 2 Kártyajáték</h1>
-    
-    <div class="nav-bar">
-        <a href="#">Főoldal</a>
-        <a href="cards.html">Összes kártya</a>
+
+    <nav class="nav-bar">
+        <a href="index.html">Főoldal</a>
+        <a href="cards.html">Összes Kártya</a>
         <a href="#">Játék</a>
         <a href="#">Tutorial</a>
-    </div>
-    
+    </nav>
+
     <div class="content">
-        <p style="font-size: 1.2rem;">
+        <p>
             Izgalom, stratégia, gyors matek és kemény döntések egy játékban!<br><br>
             Ez a kártyajáték az XCOM széria ihletésére készült, és 2 vagy több játékos számára kínál izgalmas taktikai csatákat. 
             Ha szereted a kihívásokat és a stratégiai gondolkodást, ez a játék neked szól!
         </p>
+
         <h2>Hogyan kell játszani?</h2>
-        <p style="font-size: 1.2rem;">
+        <p>
             <strong>A játék menete</strong><br>
             - 128 féle kártya közül lehet választani.<br>
             - Minden körben húzhatsz kettőt egyszer a harcban és egyet a harc után.<br>
@@ -108,30 +41,24 @@
             - Minden körben kapsz 2 coint, ha túlélted.<br>
             - Ha nyertél, bónusz 1 coint kapsz.<br>
         </p>
-        <p style="font-size: 1.2rem;">
-            <strong>Hogyan született meg?</strong><br><br>
-            Helló, üdvözöllek a játékomban!<br>
+
+        <h2>Hogyan született meg?</h2>
+        <p>
             A fejlesztés 2023-ban indult – akkor még csak egyszerű kártyapapírokkal játszottam, de innen indult minden. 
             2025-re viszont egy nagyobb ötletem támadt: mi lenne, ha egy weboldalon az egész világ kipróbálhatná és tesztelhetné?
         </p>
-        <p style="font-size: 1.2rem;">
-            Ez egy egyedi és kihívást jelentő játék, ahol a matematikai gondolkodás elengedhetetlen. Ha ismered és szereted az XCOM szériát, ez a játék ismerős lehet – de ne aggódj, a mechanikákat átalakítottam, így friss és élvezetes élményt nyújt!
+
+        <p>
+            Ez egy egyedi és kihívást jelentő játék, ahol a matematikai gondolkodás elengedhetetlen. Ha ismered és szereted az XCOM szériát, ez a játék ismerős lehet – de a mechanikákat átalakítottam, így friss és élvezetes élményt nyújt!
         </p>
-        <p style="font-size: 1.2rem;">
-            Remélem, kipróbálod és tetszeni fog!
-        </p>
+        <p>Remélem, kipróbálod és tetszeni fog!</p>
     </div>
 
-    <!-- Kártyák megjelenítése -->
     <div class="card-gallery">
         <img src="cards/card1.png" alt="Kártya 1">
         <img src="cards/card2.png" alt="Kártya 2">
         <img src="cards/card3.png" alt="Kártya 3">
     </div>
-</body> <nav class="navbar">
-    <a href="index.html">Főoldal</a>
-    <a href="cards.html">Összes Kártya</a>
-</nav>
-
+</body>
 </html>
 
