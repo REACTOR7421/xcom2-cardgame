@@ -2,9 +2,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("card-container");
 
-    if (!container) {
-        console.error("A card-container elem nem található.");
-        return;
+   if (!window.cards || !Array.isArray(window.cards)) {
+    console.error("HIBA: A cards.js nem töltődött be, vagy nincs megfelelő formátumban.");
+    return;
     }
 
     // Ellenőrizzük, hogy a cards.js be van-e töltve
