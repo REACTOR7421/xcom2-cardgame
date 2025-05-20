@@ -76,5 +76,7 @@ h1 {
     width: 200px;
     height: auto;
     border-radius: 10px;
+.card img {
+    display: block;
 }
 
