@@ -6,6 +6,11 @@
     <title>Összes Kártya</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* A body‑nak adunk egy felső belső margót a fixed navbar alá */
+        body {
+            padding-top: 80px; /* kb. a navbar magassága + kis ráhagyás */
+        }
+
         .card-container {
             display: flex;
             flex-wrap: wrap;
@@ -31,9 +36,31 @@
             height: 100%;
             border-radius: 10px;
             object-fit: cover;
+            display: block; /* a fallback alt‑szöveg ne jelenjen meg */
         }
     </style>
 </head>
+<body>
+
+    <!-- FIXED NAVBAR: hamarabb kerül a DOM‑ba -->
+    <nav class="nav-bar">
+        <a href="index.html">Főoldal</a>
+        <a href="cards.html">Összes Kártya</a>
+        <a href="#">Játék</a>
+        <a href="#">Tutorial</a>
+    </nav>
+
+    <!-- Fejléc -->
+    <h1>Összes Kártya</h1>
+
+    <!-- Kártyák konténere -->
+    <div class="card-container" id="card-container"></div>
+
+    <!-- JavaScript betöltés -->
+    <script src="cards.js"></script>
+    <script src="loadCards.js"></script>
+</body>
+</html>
 <body>
 
     <!-- Fejléc és Navigáció -->
