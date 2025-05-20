@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Összes Kártya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* A body‑nak adunk egy felső belső margót a fixed navbar alá */
+        /* Alap beállítások és fixed navbar alá tolás */
         body {
-            padding-top: 80px; /* a navbar magassága + ráhagyás */
             margin: 0;
+            padding-top: 80px;
+            font-family: 'Nunito', sans-serif;
         }
-
+        /* Kártyák galéria */
         .card-container {
             display: flex;
             flex-wrap: wrap;
@@ -25,23 +27,23 @@
             background-color: #a67c52;
             border: 2px solid #5a3e2b;
             border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: white;
+            overflow: hidden;
         }
         .card img {
             width: 100%;
             height: 100%;
-            border-radius: 10px;
             object-fit: cover;
             display: block;
+            font-size: 0; /* alt szöveg ne jelenjen meg */
         }
     </style>
 </head>
 <body>
+    <!-- Nyelvválasztó -->
+    <div class="flag-selector">
+        <img src="hungary-flag.png" alt="Magyar" onclick="setLanguage('hu')">
+        <img src="uk-flag.png" alt="English" onclick="setLanguage('en')">
+    </div>
 
     <!-- FIXED NAVBAR -->
     <nav class="nav-bar">
@@ -52,13 +54,17 @@
     </nav>
 
     <!-- Oldal címe -->
-    <h1>Összes Kártya</h1>
+    <h1 style="font-family: 'Acme', sans-serif; font-size: 3rem; margin-top: 20px;">Összes Kártya</h1>
 
     <!-- Kártyák konténere -->
     <div class="card-container" id="card-container"></div>
 
     <!-- JavaScript betöltés -->
     <script src="cards.js"></script>
+    <script src="loadCards.js"></script>
+</body>
+</html>
+
     <script src="loadCards.js"></script>
 </body>
 </html>
